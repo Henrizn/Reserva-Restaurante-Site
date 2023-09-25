@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toca do Açaí - Principal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="background"></div>
+  <div class="reservePage">
+    <section id="reserve" class="closedReserve">
+      <div id="headerReserve" class="headerReserve">
+        <h3>Restaurante Toca do Açaí</h3>
+        <h5>Trav. Di Aross, 123 - Belém/PA</h5>
+      </div>
+      <div id="mainReserve" class="mainReserve">
+          <p class="inp">Dia da Reserva: <input type="date" id="txtdate"></p>
+          <p class="sel">Selecione</p>
+          <p class="inp">Salão: <input list="saloes" name="salao" id="txtsalao"></p>
+          <p class="sel">Selecione</p>
+          <p class="inp">Pessoas: <input type="number" id="txtpessoas"></p>
+          <p class="sel">Selecione</p>
+          <p class="inp">Horário: <input type="time" id="txthora"></p>
+          <p class="sel">Selecione</p>
+        <datalist id="saloes">
+          <option value="Salão Principal"></option>
+          <option value="Salão Superior"></option>
+        </datalist>
+      </div>
+      <div id="footerReserve" class="footerReserve">
+        <button class="close-reserve" id="close-reserve">Cancelar</button>
+        <input type="button" value="Fazer reserva" class="btnSent" id="make-Reserve">
+      </div>
+    </section>
+    <section id="confirmedReserve" class="closedReserve">
+      <div id="headerReserve" class="headerReserve">
+        <h3>Reserva Confirmada</h3>
+        <h5>Restaurante Toca do Açaí</h5>
+      </div>
+      <div id="mainReserve" class="mainReserve">
+        <h3>Seu código de reserva:</h3>
+        <p id="cod">Código</p>
+        <h3>Informações da reserva:</h3>
+        <p>Em breve...</p>
+      </div>
+      <div id="footerReserve" class="footerConfReserve">
+        <button class="close-reserve" id="close-ConfReserve">Fechar menu</button>
+      </div>
+    </form>
+    </section>
+  </div>
+  <div class="conteudo">
+    <header>
+      <div class="logo">
+        <img src="./Assets/imgs/logoacai.png" alt="Logo" class="logo" />
+      </div>
+      <label for="click" class="mainicon">
+        <div class="menu">
+          <i class="bi bi-list"></i>
+        </div>
+        <nav>
+          <li><a href="./index.html" class="active">Ínicio</a></li>
+          <button class="open-reserve" id="open-reserve">Faça sua reserva</button>
+        </nav>
+    </header>
+
+    <section>
+      <div class="main">
+        <section class="Detalhes">
+          <div class="detail">
+            <h1>
+              Bem-vindo(a) ao restaurante Toca do Açaí
+            </h1>
+            <p>O restaurante Toca do Açaí é um estabelecimento popular localizado no coração da Grande Belém. <br>
+              É conhecido por suas deliciosas e saudáveis ​tigelas de açaí, feitas com a polpa do açaí, extraídas na
+              região. <br>
+              O restaurante oferece uma grande variedade de comidas típicas, tornando-o um favorito entre moradores e
+              turistas.<br>
+              Além das tigelas exclusivas, a Toca do Açaí também serve smoothies, sanduíches e saladas fresquinhas. <br>
+              <br>
+              Um dos destaques da Toca do Açaí é o ambiente e a atmosfera. O restaurante tem um ambiente descontraído e
+              casual, sendo o local perfeito para um almoço ou jantar casual com amigos.<br>
+              A decoração é simples mas elegante, com detalhes em madeira natural, criando um ambiente acolhedor e
+              convidativo. <br>
+              Além disso, oferecemos mesas ao ar livre, proporcionando aos clientes a oportunidade de desfrutar das suas
+              refeições ao ar livre.
+            </p>
+            <div class="social">
+              <div>
+                <img src="./Assets/imgs/INSTAGRAM white.png" alt="Logo Instagram">
+                <p>@tocadoacaioficial</p>
+              </div>
+              <div>
+                <img src="./Assets/imgs/logo-whatsapp-png-transparente12.png" alt="">
+                <p>(91) 98245-6789</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <center>
+          <p>Copyright © Todos os direitos reservados</p>
+        </center>
+      </div>
+    </section>
+  </div>
+  <script type="module" src="./main.js"></script>
+</body>
+
+</html>

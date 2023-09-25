@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-height: 100vh;
+}
+
+.background {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    display: block;
+    background-image: url('/Assets/imgs/restaurantes-em-curitiba-03.png');
+    height: 1080px;
+    width: 1920px;  
+    filter: saturate(90%);
+    filter: brightness(60%);
+    filter: blur(px);
+}
+
+.conteudo {
+    left: 0;
+    right: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.reservePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.openedReserve {
+    z-index: 3;
+    opacity: 100;
+    margin: auto;
+    inset: 0 0;
+    position: fixed;
+    height: 500px;
+    width: 360px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: -3px 0 black, 0 3px black,
+    3px 0 black, 0 -3px black;
+}
+.closedReserve {
+    z-index: 3;
+    opacity: 100;
+    margin: auto;
+    inset: 0 0;
+    position: fixed;
+    height: 500px;
+    width: 360px;
+    right: -3000px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    box-shadow: -3px 0 black, 0 3px black,
+    3px 0 black, 0 -3px black;
+}
+
+.headerReserve {
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 1rem;
+}
+
+.headerReserve h5 {
+    color: #797979;
+    text-align: center;
+}
+
+.mainReserve {
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 300;
+    letter-spacing: .7px;
+    padding: 1rem;
+}
+
+.inp {
+    display: flex;
+    text-align: center;
+    padding: 10px 10px 10px 32px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.sel {
+    display: flex;
+    text-align: center;
+    padding: 0px 10px 20px 32px;
+    color: #797979;
+    font-weight: 100;
+}
+
+.mainReserve input {
+    margin-left: 10px;
+    justify-content: right;
+}
+
+.mainReserve h3 {
+    margin-top: 20px;
+}
+
+.footerReserve {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-right: 30px;
+}
+
+.footerConfReserve {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 200px;
+}
+
+.close-reserve {
+    color: #797979;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 2rem;
+    background-color: #ffffff00;
+    border: #00000050;
+}
+
+.close-reserve.active,
+.close-reserve:hover {
+    color: rgb(133, 0, 115);
+    transition: all.3s ease-in-out;
+}
+
+.btnSent {
+    margin-top: 1px;
+    color: rgb(255, 255, 255);
+    border: #00000000;
+    border-radius: 15px;
+    background-color: rgb(133, 0, 115);
+    text-align: center;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 300;
+    letter-spacing: .7px;
+    padding: 10px 30px 10px 30px;
+}
+
+header {
+    padding: 1.7rem 14rem;
+    background-color: #ffffff25;
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%;
+    margin: auto;
+    align-items: center;
+    border-width: 3px;
+    border-style: solid;
+    border-image:
+        linear-gradient(to bottom,
+            rgb(133, 0, 115),
+            rgba(0, 0, 0, 0)) 1 100%;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+nav {
+    color: #fff;
+    padding: 10px;
+}
+
+li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 1rem;
+}
+
+nav a.active, nav a:hover {
+    color: rgb(133, 0, 115);
+    border-radius: 1rem;
+    transition: all.3s ease-in-out;
+}
+
+.open-reserve {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 1rem;
+    background-color: #ffffff00;
+    border: #00000050;
+}
+
+.open-reserve.active,
+.open-reserve:hover {
+    color: rgb(133, 0, 115);
+    transition: all.3s ease-in-out;
+}
+
+#click {
+    display: none;
+}
+
+.menu i {
+    color: rgb(133, 0, 115);
+}
+
+.menu {
+    display: none;
+}
+
+section {
+    margin: 1rem 3rem;
+}
+
+.main {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.main p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #fff;
+    font-size: larger;
+}
+
+.main h2 {
+    color: #fff;
+    padding-bottom: 25px;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.4rem;
+    margin-top: 1.7rem;
+    justify-content: center;
+    margin-bottom: 5rem;
+}
+
+.social div {
+    display: flex;
+    flex: auto;
+    gap: 1rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.social img {
+    margin-top: 12px;
+    width: 30px;
+    height: 30px;
+}
+
+.main h1 span:nth-child(1) {
+    font-size: 1.5rem;
+}
+
+.main h1 span:nth-child(2) {
+    color: #00e8f8;
+}
