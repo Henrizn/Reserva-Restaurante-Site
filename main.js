@@ -27,32 +27,46 @@ function startReserve() {
 
     buttonCloseReserve.addEventListener("click", closeReserve)
     buttonOpenReserve.addEventListener("click", openReserve)
-    buttonMakeReserve.addEventListener("click", reservar)
+    buttonMakeReserve.addEventListener("click", makeReserve)
     buttonCloseConfReserve.addEventListener("click", closeConfirmReserve)
+}
+
+function makeReserve() {
+    let tdate = new Date(document.getElementById("txtdate").value).toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    let tsalao = document.getElementById("txtsalao").value
+    let tpessoas = Number(document.getElementById("txtpessoas").value)
+    let thora = document.getElementById("txthora").value
+    let error = document.getElementById('error')
+
+    if (tdate == 'Invalid Date' || tsalao == '' || tpessoas <= 0 || thora == 0) {
+        error.innerHTML = `Informações incompletas!`
+    } else {
+        reservar()
+    }
 }
 
 function reservar() {
     openConfirmReserve()
     let num = getRandomNum(1000, 2000)
     let letter = getRandomString(1)
-    let tdate = new Date(document.getElementById("txtdate"))
-    let tsalao = document.getElementById("txtsalao")
-    let tpessoas = Number(document.getElementById("txtpessoas"))
-    let thora = document.getElementById("txthora")
+    let tdate = new Date(document.getElementById("txtdate").value).toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    let tsalao = document.getElementById("txtsalao").value
+    let tpessoas = Number(document.getElementById("txtpessoas").value)
+    let thora = document.getElementById("txthora").value
 
     let codigo = letter + num
-    /* let cod = document.getElementById('cod')
-    let dia = document.getElementById('dia')
-    let salao = document.getElementById('salao')
-    let pessoas = document.getElementById('pessoas')
-    let horario = document.getElementById('horario')
+
+    let pdate = document.getElementById('pdate')
+    let psalao = document.getElementById('psalao')
+    let ppessoas = document.getElementById('ppessoas')
+    let phora = document.getElementById('phora')
     
 
-    dia.innerHTML = `${tdate}`
-    salao.innerHTML = `${tsalao}`
-    pessoas.innerHTML = `${tpessoas}`
-    horario.innerHTML = `${thora}` */
     cod.innerHTML = `#${codigo}`
+    pdate.innerHTML = `<strong>Dia:</strong> ${tdate}`
+    psalao.innerHTML = `<strong>Local:</strong> ${tsalao}`
+    ppessoas.innerHTML = `<strong>Quant. de Pessoas:</strong> ${tpessoas} pessoas` 
+    phora.innerHTML = `<strong>Horário:</strong> ${thora}h`
 }
 
 function getRandomNum(min, max) {
