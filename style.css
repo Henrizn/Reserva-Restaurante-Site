@@ -31,13 +31,7 @@ body {
     position: fixed;
 }
 
-.reservePage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.openedReserve {
+.openedReserve, .openedLogin {
     z-index: 3;
     opacity: 100;
     margin: auto;
@@ -50,7 +44,7 @@ body {
     box-shadow: -3px 0 black, 0 3px black,
     3px 0 black, 0 -3px black;
 }
-.closedReserve {
+.closedReserve, .closedLogin {
     z-index: 3;
     opacity: 100;
     margin: auto;
@@ -65,7 +59,7 @@ body {
     3px 0 black, 0 -3px black;
 }
 
-.headerReserve {
+.headerReserve, .headerLogin {
     text-align: center;
     text-decoration: none;
     font-size: large;
@@ -75,16 +69,16 @@ body {
     padding-bottom: 1px;
 }
 
-.headerReserve h5 {
+#error, #errorLogin {
+    color: red;
+}
+
+.headerReserve h5, .headerLogin h5 {
     color: #797979;
     text-align: center;
 }
 
-#error {
-    color: red;
-}
-
-.mainReserve {
+.mainReserve, .mainLogin {
     text-align: center;
     text-decoration: none;
     font-size: large;
@@ -109,7 +103,7 @@ body {
     font-weight: 100;
 }
 
-.mainReserve input {
+.mainReserve input, .mainLogin input {
     margin-left: 10px;
     justify-content: right;
 }
@@ -118,21 +112,21 @@ body {
     margin-top: 20px;
 }
 
-.footerReserve {
+.footerReserve, .footerLogin {
     display: flex;
     justify-content: center;
     text-align: center;
     padding-right: 30px;
 }
 
-.footerConfReserve {
+.footerConfReserve, .footerConfLogin {
     display: flex;
     justify-content: center;
     align-content: center;
     padding-top: 150px;
 }
 
-.close-reserve {
+.close-reserve, .close-login {
     color: #797979;
     text-decoration: none;
     font-size: large;
@@ -144,7 +138,9 @@ body {
 }
 
 .close-reserve.active,
-.close-reserve:hover {
+.close-reserve:hover,
+.close-login.active,
+.close-login:hover {
     color: rgb(133, 0, 115);
     transition: all.3s ease-in-out;
 }
@@ -211,7 +207,7 @@ nav a.active, nav a:hover {
     transition: all.3s ease-in-out;
 }
 
-.open-reserve {
+.open-reserve, .open-login {
     color: #fff;
     text-decoration: none;
     font-size: large;
@@ -223,7 +219,9 @@ nav a.active, nav a:hover {
 }
 
 .open-reserve.active,
-.open-reserve:hover {
+.open-reserve:hover,
+.open-login.active,
+.open-login:hover {
     color: rgb(133, 0, 115);
     transition: all.3s ease-in-out;
 }
