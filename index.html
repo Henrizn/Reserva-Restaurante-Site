@@ -50,14 +50,14 @@
         <h5 id="error"></h5>
       </div>
       <div id="mainReserve" class="mainReserve">
-          <p class="inp">Dia da Reserva: <input type="date" id="txtdate"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Salão: <input list="saloes" name="salao" id="txtsalao"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Pessoas: <input type="number" id="txtpessoas"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Horário: <input type="time" id="txthora"></p>
-          <p class="sel">Selecione</p>
+        <p class="inp">Dia da Reserva: <input type="date" id="txtdate"></p>
+        <p class="sel">Selecione</p>
+        <p class="inp">Salão: <input list="saloes" name="salao" id="txtsalao"></p>
+        <p class="sel">Selecione</p>
+        <p class="inp">Pessoas: <input type="number" id="txtpessoas"></p>
+        <p class="sel">Selecione</p>
+        <p class="inp">Horário: <input type="time" id="txthora"></p>
+        <p class="sel">Selecione</p>
         <datalist id="saloes">
           <option value="Salão Principal"></option>
           <option value="Salão Superior"></option>
@@ -66,6 +66,21 @@
       <div id="footerReserve" class="footerReserve">
         <button class="close-reserve" id="close-reserve">Cancelar</button>
         <input type="button" value="Fazer reserva" class="btnSent" id="make-reserve">
+      </div>
+    </section>
+    <section id="payment" class="closedPayment">
+      <div id="headerPayment" class="headerPayment">
+        <h3>Pagamento</h3>
+        <h5>Leia o PIX via QR Code</h5>
+        <h5 id="errorPayment"></h5>
+      </div>
+      <div id="mainPayment" class="mainPayment">
+        <img src="./Assets/imgs/pix.jpg" alt="pix" class="pix">
+        <p><strong>Valor: </strong>R$ 10,00</p>
+      </div>
+      <div id="footerPayment" class="footerPayment">
+        <button class="close-reserve" id="close-payment">Cancelar</button>
+        <input type="button" value="Já paguei" class="btnSent" id="paid">
       </div>
     </section>
     <section id="confirmedReserve" class="closedReserve">
@@ -86,7 +101,7 @@
       <div id="footerReserve" class="footerConfReserve">
         <button class="close-reserve" id="close-ConfReserve">Fechar menu</button>
       </div>
-    </form>
+      </form>
     </section>
   </div>
   <div class="conteudo">
@@ -129,11 +144,11 @@
             <div class="social">
               <div>
                 <img src="./Assets/imgs/INSTAGRAM white.png" alt="Logo Instagram">
-                <p>@tocadoacaioficial</p>
+                <p class="insta">@tocadoacaioficial</p>
               </div>
               <div>
                 <img src="./Assets/imgs/logo-whatsapp-png-transparente12.png" alt="">
-                <p>(91) 98245-6789</p>
+                <p class="whatsapp">(91) 98245-6789</p>
               </div>
             </div>
           </div>

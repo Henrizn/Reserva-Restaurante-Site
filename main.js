@@ -1,9 +1,32 @@
 let logado = false
+let currentMenu = 6
+const menus = [openLogin, openConfirmLogin, openReserve, openConfirmReserve, openPayment]
+let error = document.getElementById('errorLogin')
+
+function closeMenus() {
+    closeLogin()
+    closeConfirmLogin()
+    closeReserve()
+    closeConfirmReserve()
+    closePayment()
+
+    let i = 10
+    while (i < 5) {
+        if (currentMenu == i) {
+            menus[i]()
+            break
+        }
+        i++
+    }
+}
 
 function openLogin() {
+    currentMenu = 0
+    closeMenus()
     if (logado == true) {
         openConfirmLogin()
     } else {
+        closeReserve()
         document.getElementById('login').classList.remove("closedLogin")
         document.getElementById('login').classList.add("openedLogin")
     }
@@ -15,9 +38,14 @@ function closeLogin() {
 }
 
 function openConfirmLogin() {
-    closeLogin()
+    currentMenu = 1
+    closeMenus()
     document.getElementById('confirmedLogin').classList.remove("closedLogin")
     document.getElementById('confirmedLogin').classList.add("openedLogin")
+
+    let tuser = document.getElementById('txtuser').value
+    let twelcome = document.getElementById('pwelcome')
+    twelcome.innerHTML = `Bem-vindo(a), ${tuser}`
 }
 
 function closeConfirmLogin() {
@@ -26,8 +54,15 @@ function closeConfirmLogin() {
 }
 
 function openReserve() {
-    document.getElementById('reserve').classList.remove("closedReserve")
-    document.getElementById('reserve').classList.add("openedReserve")
+    currentMenu = 2
+    closeMenus()
+    if (logado == true) {
+        document.getElementById('reserve').classList.remove("closedReserve")
+        document.getElementById('reserve').classList.add("openedReserve")
+    } else {
+        openLogin()
+        error.innerHTML = `É necessário fazer o login!`
+    }
 }
 
 function closeReserve() {
@@ -36,7 +71,8 @@ function closeReserve() {
 }
 
 function openConfirmReserve() {
-    closeReserve()
+    currentMenu = 3
+    closeMenus()
     document.getElementById('confirmedReserve').classList.remove("closedReserve")
     document.getElementById('confirmedReserve').classList.add("openedReserve")
 }
@@ -44,6 +80,17 @@ function openConfirmReserve() {
 function closeConfirmReserve() {
     document.getElementById('confirmedReserve').classList.remove("openedReserve")
     document.getElementById('confirmedReserve').classList.add("closedReserve")
+}
+
+function openPayment() {
+    currentMenu = 4
+    closeMenus()
+    document.getElementById('payment').classList.remove("closedPayment")
+    document.getElementById('payment').classList.add("openedPayment")
+}
+function closePayment() {
+    document.getElementById('payment').classList.remove("openedPayment")
+    document.getElementById('payment').classList.add("closedPayment")
 }
 
 function startLogin() {
@@ -65,24 +112,26 @@ function startReserve() {
     const buttonOpenReserve = document.getElementById('open-reserve')
     const buttonMakeReserve = document.getElementById('make-reserve')
     const buttonCloseConfReserve = document.getElementById('close-ConfReserve')
+    const buttonClosePayment = document.getElementById('close-payment')
+    const buttonPayment = document.getElementById('paid')
 
     buttonCloseReserve.addEventListener("click", closeReserve)
     buttonOpenReserve.addEventListener("click", openReserve)
     buttonMakeReserve.addEventListener("click", makeReserve)
     buttonCloseConfReserve.addEventListener("click", closeConfirmReserve)
+    buttonPayment.addEventListener("click", reservar)
+    buttonClosePayment.addEventListener("click", closePayment)
 }
 
 function makeLogin() {
     let tuser = document.getElementById('txtuser').value
     let tpass = document.getElementById('txtpass').value
-    let error = document.getElementById('errorLogin')
 
     if (tuser == 0 || tpass == 0) {
         error.innerHTML = `Informações incompletas!`
     } else {
         logado = true
         openConfirmLogin()
-        login()
     }
 }
 
@@ -95,23 +144,17 @@ function makeReserve() {
 
     if (tdate == 'Invalid Date' || tsalao == '' || tpessoas <= 0 || thora == 0) {
         error.innerHTML = `Informações incompletas!`
-    } else if (logado == false) {
-        error.innerHTML = `É necessário fazer login primeiro!`
     } else {
-        reservar()
+        openPayment()
+        error .innerHTML = ``
     }
-}
-
-function login() {
-    let tuser = document.getElementById('txtuser').value
-    let twelcome = document.getElementById('pwelcome')
-    twelcome.innerHTML = `Bem-vindo(a), ${tuser}`
 }
 
 function logout() {
     logado = false
     closeConfirmLogin()
     openLogin()
+    error.innerHTML = ``
 }
 
 function reservar() {
