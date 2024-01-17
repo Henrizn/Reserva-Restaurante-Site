@@ -4,95 +4,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toca do Açaí - Principal</title>
+  <title>Principal - NightCraft</title>
+  <link rel="icon" href="./icon.ico">
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div class="background"></div>
-  <div class="loginPage">
-    <section id="login" class="closedLogin">
-      <div id="headerLogin" class="headerLogin">
-        <h3>Faça Login</h3>
-        <h5>Insira as suas informações</h5>
-        <h5 id="errorLogin"></h5>
-      </div>
-      <div id="mainLogin" class="mainLogin">
-        <p class="inp">Usuário: <input type="text" id="txtuser"></p>
-        <p class="inp">Senha: <input type="password" id="txtpass"></p>
-
-        <p class="sel">Lembrar de mim <input type="checkbox" id="remember"></p>
-      </div>
-      <div id="footerLogin" class="footerLogin">
-        <button class="close-login" id="close-login">Cancelar</button>
-        <input type="button" value="Fazer login" class="btnSent" id="make-login">
-      </div>
-    </section>
-    <section id="confirmedLogin" class="closedLogin">
-      <div id="headerLogin" class="headerLogin">
-        <h3>Login realizado!</h3>
-        <h5>Você fez login!</h5>
-      </div>
-      <div id="mainLogin" class="mainLogin">
-        <p id="pwelcome"></p>
-      </div>
-      <div id="footerConfLogin" class="footerConfLogin">
-        <button class="close-login" id="close-ConfLogin">Fechar</button>
-        <input type="button" value="Sair da conta" class="btnSent" id="logout">
-      </div>
-    </section>
-  </div>
-  <div class="reservePage">
-    <section id="reserve" class="closedReserve">
-      <div id="headerReserve" class="headerReserve">
-        <h3>Restaurante Toca do Açaí</h3>
-        <h5>Trav. Di Aross, 123 - Belém/PA</h5>
-        <h5 id="error"></h5>
-      </div>
-      <div id="mainReserve" class="mainReserve">
-          <p class="inp">Dia da Reserva: <input type="date" id="txtdate"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Salão: <input list="saloes" name="salao" id="txtsalao"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Pessoas: <input type="number" id="txtpessoas"></p>
-          <p class="sel">Selecione</p>
-          <p class="inp">Horário: <input type="time" id="txthora"></p>
-          <p class="sel">Selecione</p>
-        <datalist id="saloes">
-          <option value="Salão Principal"></option>
-          <option value="Salão Superior"></option>
-        </datalist>
-      </div>
-      <div id="footerReserve" class="footerReserve">
-        <button class="close-reserve" id="close-reserve">Cancelar</button>
-        <input type="button" value="Fazer reserva" class="btnSent" id="make-reserve">
-      </div>
-    </section>
-    <section id="confirmedReserve" class="closedReserve">
-      <div id="headerReserve" class="headerReserve">
-        <h3>Reserva Confirmada</h3>
-        <h5>Restaurante Toca do Açaí</h5>
-      </div>
-      <div id="mainReserve" class="mainReserve">
-        <h3>Seu código de reserva:</h3>
-        <p id="cod">Código</p>
-        <h3>Informações da reserva:</h3>
-        <p id="reservante">Reservante</p>
-        <p id="pdate">Data</p>
-        <p id="psalao">Salão</p>
-        <p id="ppessoas">Pessoas</p>
-        <p id="phora">Hora</p>
-      </div>
-      <div id="footerReserve" class="footerConfReserve">
-        <button class="close-reserve" id="close-ConfReserve">Fechar menu</button>
-      </div>
-    </form>
-    </section>
-  </div>
   <div class="conteudo">
     <header>
       <div class="logo">
-        <img src="./Assets/imgs/logoacai.png" alt="Logo" class="logo" />
+        <img src="./Assets/imgs/LOGOMARCA NIGHTCRAFT.png" alt="Logo" class="logo" />
       </div>
       <label for="click" class="mainicon">
         <div class="menu">
@@ -100,48 +22,62 @@
         </div>
         <nav>
           <li><a href="./index.html" class="active">Ínicio</a></li>
-          <button class="open-reserve" id="open-reserve">Fazer uma reserva</button>
-          <button class="open-login" id="open-login">Fazer Login</button>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#regras">Regras</a></li>
         </nav>
     </header>
+    <section class="main">
+      <h1>
+        <center>Bem-Vindo(a) à <font color="purple">Night</font>Craft!</center>
+      </h1>
+      <h2>
+        <center><font color="purple">Bedrock:</font> CA-01.AstralCloud.com.br // 25639<br><font color="purple">Java:</font> NightCraft.Astral.ovh</center>
+      </h2>
+      <section class="seçao" name="seçao-produtos">
+        <a name="produtos"></a>
+        <h2>Produtos <font color="yellow">(EM OFERTA)</font>:</h2>
+        <section id="container-products" class="produtos" name="produtos"></section>
+      </section>
+      <section class="seçao" id="seçao-regras" name="seçao-regras">
+        <a name="regras"></a>
+        <h2>Regras:</h2>
+        <p class="regras">1 - Ofensas, xingamentos e calúnia: Não ofenda ninguém, e não faça qualquer acusações falsas
+          independentemente do seu cargo!<br><br>
+          2 - Divulgação: Expressamente proibido a divulgação de quaisquer outros servidores de Minecraft ou Discord que
+          não sejam parceiros.<br><br>
+          3 - Uso de hacks ou bugs: o uso de quaisquer bugs ou programas de terceiros que dêem à você vantagem sobre os
+          outros jogadores resultará em punição ao jogador infrator.<br><br>
+          4 - Abuso de poder: Reporte imediatamente caso veja algum membro da equipe NightCraft usando suas permissões
+          para dar vantagens à outro jogador. <br><br>
+          5 - Intolerância: Expressamente proibido racismo, homofobia, xenofobia etc. em nosso servidor. <br><br>
+          6 - Roubo: Caso denunciado com provas, o jogador infrator será punido. <br><br>
+          8 - Dups: o uso de dups na NightCraft resultará em punição severa ao infrator.<br><br>
+          9 - Flood/Spam: spammar ou floodar no nosso servidor resultará na aplicação de punição em você.<br><br>
+          A forma de punição aplicada será determinada pelo membro da equipe de cargo mais alto que estiver online no
+          momento da infração!<br><br>
 
-    <section>
-      <div class="main">
-        <section class="Detalhes">
-          <div class="detail">
-            <h1>
-              Bem-vindo(a) ao restaurante Toca do Açaí
-            </h1>
-            <p>O restaurante Toca do Açaí é um estabelecimento popular localizado no coração da Grande Belém. <br>
-              É conhecido por suas deliciosas e saudáveis ​tigelas de açaí, feitas com a polpa do açaí, extraídas na
-              região. <br>
-              O restaurante oferece uma grande variedade de comidas típicas, tornando-o um favorito entre moradores e
-              turistas.<br>
-              Além das tigelas exclusivas, a Toca do Açaí também serve smoothies, sanduíches e saladas fresquinhas. <br>
-              <br>
-              Um dos destaques da Toca do Açaí é o ambiente e a atmosfera. O restaurante tem um ambiente descontraído e
-              casual, sendo o local perfeito para um almoço ou jantar casual com amigos.<br>
-              A decoração é simples mas elegante, com detalhes em madeira natural, criando um ambiente acolhedor e
-              convidativo. <br>
-              Além disso, oferecemos mesas ao ar livre, proporcionando aos clientes a oportunidade de desfrutar das suas
-              refeições ao ar livre.
-            </p>
-            <div class="social">
-              <div>
-                <img src="./Assets/imgs/INSTAGRAM white.png" alt="Logo Instagram">
-                <p>@tocadoacaioficial</p>
-              </div>
-              <div>
-                <img src="./Assets/imgs/logo-whatsapp-png-transparente12.png" alt="">
-                <p>(91) 98245-6789</p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <center>
-          <p>Copyright © Todos os direitos reservados</p>
-        </center>
+          As regras podem ser alteradas a qualquer momento sem aviso prévio!<br>
+          Última modificação: 02/01/2023
+        </p>
+        <button class="read-button" id="read-button">Ler mais +</button>
+      </section>
+      <div class="social">
+        <div>
+          <img src="./Assets/imgs/LOGO INSTAGRAM.png" alt="Logo Instagram" class="insta-img">
+          <a href="https://www.instagram.com/nightcraft.oficial/">
+            <p class="insta">@NightCraft.Oficial</p>
+          </a>
+        </div>
+        <div>
+          <img src="./Assets/imgs/LOGO DISCORD.png" alt="" class="discord-img">
+          <a href="https://discord.gg/QgwRuTuz9x">
+            <p class="discord">NightCraft Oficial</p>
+          </a>
+        </div>
       </div>
+      <center>
+        <p>Copyright © 2024 NIGHTCRAFT</p>
+      </center>
     </section>
   </div>
   <script type="module" src="./main.js"></script>
