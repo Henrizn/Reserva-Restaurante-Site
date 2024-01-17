@@ -198,6 +198,5 @@ function getRandomString(tamanho) {
     return stringAleatoria
 }
 
-
 startReserve()
 startLogin()
