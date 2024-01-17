@@ -14,4 +14,4 @@ Projeto em andamento, sendo realizado por alunos da Escola Técnica Estadual Mag
 - # 📁 Acesso ao projeto
 Você pode <a href="https://github.com/Henrizn/Reserva-Restaurante-Site">acessar o código-fonte clicando aqui</a>
 # 🛠️ Abrir e rodar o projeto
-Você pode abrir o <a href="https://henrizn.github.io/Reserva-Restaurante-Site/">site do projeto clicando aqui</a>
+Você pode entrar no <a href="https://henrizn.github.io/Reserva-Restaurante-Site/">site do projeto clicando aqui</a>
