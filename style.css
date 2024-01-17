@@ -71,6 +71,11 @@ header {
     max-height: 175px;
 }
 
+.pix {
+    max-width: 250px;
+    max-height: 250px;
+}
+
 nav {
     color: #fff;
     padding: 10px;
