@@ -9,7 +9,8 @@ body {
 }
 
 .background {
-    background-size: 100%;
+    min-height: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     position: fixed;
     left: 0;
@@ -17,74 +18,15 @@ body {
     z-index: 1;
 
     display: block;
-    background-image: url('./Assets/imgs/restaurantes-em-curitiba-03.png');
-    height: 1080px;
-    width: 1920px;  
-    filter: saturate(90%);
-    filter: brightness(60%);
+    background-color: #000000;
 }
 
 .conteudo {
+    overflow: auto;
     left: 0;
     right: 0;
     z-index: 2;
-    position: fixed;
-}
-
-.openedReserve, .openedLogin, .openedPayment {
-    z-index: 3;
-    opacity: 100;
-    margin: auto;
-    inset: 0 0;
-    position: fixed;
-    height: 500px;
-    width: 360px;
-    border-radius: 25px;
-    background-color: #ffffff;
-    box-shadow: -3px 0 black, 0 3px black,
-    3px 0 black, 0 -3px black;
-}
-.closedReserve, .closedLogin, .closedPayment {
-    z-index: 3;
-    opacity: 100;
-    margin: auto;
-    inset: 0 0;
-    position: fixed;
-    height: 500px;
-    width: 360px;
-    right: -3000px;
-    border-radius: 25px;
-    background-color: #ffffff;
-    box-shadow: -3px 0 black, 0 3px black,
-    3px 0 black, 0 -3px black;
-}
-
-.headerReserve, .headerLogin, .headerPayment {
-    text-align: center;
-    text-decoration: none;
-    font-size: large;
-    font-weight: 600;
-    letter-spacing: .7px;
-    padding: 1rem;
-    padding-bottom: 1px;
-}
-
-#error, #errorLogin, #errorPayment {
-    color: red;
-}
-
-.headerReserve h5, .headerLogin h5, .headerPayment h5 {
-    color: #797979;
-    text-align: center;
-}
-
-.mainReserve, .mainLogin, .mainPayment {
-    text-align: center;
-    text-decoration: none;
-    font-size: large;
-    font-weight: 300;
-    letter-spacing: .7px;
-    padding: 1rem;
+    position: relative;
 }
 
 .inp {
@@ -103,73 +45,30 @@ body {
     font-weight: 100;
 }
 
-.mainReserve input, .mainLogin input {
-    margin-left: 10px;
-    justify-content: right;
-}
-
-.mainReserve h3, .mainPayment h3 {
-    margin-top: 20px;
-}
-
-.footerReserve, .footerLogin, .footerPayment {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    padding-right: 30px;
-}
-
-.footerConfReserve, .footerConfLogin, .footer {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-top: 150px;
-}
-
-.close-reserve, .close-login {
-    color: #797979;
-    text-decoration: none;
-    font-size: large;
-    font-weight: 600;
-    letter-spacing: .7px;
-    padding: 0.4rem 2rem;
-    background-color: #ffffff00;
-    border: #00000050;
-}
-
-.btnSent {
-    margin-top: 1px;
-    color: rgb(255, 255, 255);
-    border: #00000000;
-    border-radius: 15px;
-    background-color: rgb(133, 0, 115);
-    text-align: center;
-    text-decoration: none;
-    font-size: large;
-    font-weight: 300;
-    letter-spacing: .7px;
-    padding: 10px 30px 10px 30px;
-}
-
 header {
-    padding: 1.7rem 14rem;
-    background-color: #ffffff25;
+    background-image: url(./Assets/imgs/background.jpeg);
+    min-height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    padding: 0.7rem 14rem;
+    padding-bottom: 50px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
     align-items: center;
-    border-width: 3px;
     border-style: solid;
     border-image:
         linear-gradient(to bottom,
-            rgb(133, 0, 115),
+            rgb(170, 0, 170),
             rgba(0, 0, 0, 0)) 1 100%;
 }
 
 .logo {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 175px;
+    max-height: 175px;
 }
 
 .pix {
@@ -183,50 +82,41 @@ nav {
 }
 
 li {
+    text-shadow: 0px 2px 1px black;
     display: inline-block;
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav a {
+nav a, .info-item {
     color: #fff;
     text-decoration: none;
     font-size: large;
     font-weight: 600;
     letter-spacing: .7px;
     padding: 0.4rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all.3s ease-in-out;
 }
 
-nav a.active, nav a:hover {
+nav a.active, nav a:hover,
+.info-item.active, .info-item:hover {
     color: rgb(133, 0, 115);
     border-radius: 1rem;
     transition: all.3s ease-in-out;
 }
 
-.open-reserve, .open-login {
-    color: #fff;
+.insta, .discord {
     text-decoration: none;
-    font-size: large;
-    font-weight: 600;
-    letter-spacing: .7px;
-    padding: 0.4rem 1rem;
-    background-color: #ffffff00;
-    border: #00000050;
+    color: #5865F2;
+    transition: all.3s ease-in-out;
 }
 
-.open-reserve.active,
-.open-reserve:hover,
-.open-login.active,
-.open-login:hover,
-.insta.active,
-.insta:hover,
-.whatsapp.active,
-.whatsapp:hover,
-.close-reserve.active,
-.close-reserve:hover,
-.close-login.active,
-.close-login:hover {
+.insta.active, .insta:hover,
+.discord.active, .discord:hover {
     color: rgb(133, 0, 115);
     transition: all.3s ease-in-out;
 }
@@ -251,7 +141,7 @@ section {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin: 5rem auto;
+    margin: 20px auto;
 }
 
 .main h1 {
@@ -261,7 +151,6 @@ section {
 }
 
 .main p {
-    margin-top: 1rem;
     font-size: 1rem;
     color: #fff;
     font-size: larger;
@@ -287,11 +176,27 @@ section {
     gap: 1rem;
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
-.social img {
-    margin-top: 12px;
+.social a {
+    font-weight:bolder;
+    padding: 1px;
+    text-decoration: none;
+}
+
+.insta-img {
     width: 30px;
+    height: 30px;
+}
+
+.insta-img:hover {
+    width: 30px;
+    height: 30px;
+}
+
+.discord-img {
+    width: 42px;
     height: 30px;
 }
 
@@ -301,4 +206,100 @@ section {
 
 .main h1 span:nth-child(2) {
     color: #00e8f8;
+}
+
+.produtos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+s {
+    font-size: smaller;
+    color: gray;
+}
+
+.produto {
+    color: #fff;
+    text-decoration: none;
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: .7px;
+    padding: 0.4rem 1rem;
+    background-color: #ffffff00;
+    border: #00000050;
+}
+
+.info-item {
+    padding: 0;
+}
+
+.produto img {
+    width: 160px;
+}
+
+#seçao-regras::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(transparent, black);
+}
+
+.regras {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.regras::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 2000px;
+    height: 200px;
+    background: linear-gradient(transparent, black);
+}
+
+.regras.active, #seçao-regras {
+    height: auto;
+}
+
+#seçao-regras .regras.active::before {
+    visibility: hidden;
+}
+
+.read-button {
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 15px;
+    background-color: rgb(133, 0, 115);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.read-button:hover {
+    background-color: transparent;
+    color: rgb(133, 0, 115);
+    transition: all .3s ease-in-out;
+}
+
+#seçao-produtos {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#seçao-produtos p {
+    margin-top: 10px;
+}
+
+#seçao-produtos img {
+    width: 250px;
+}
+
+.seçao section {
+    display: flex;
+    justify-content: space-around;
 }

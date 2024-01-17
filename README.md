@@ -1,10 +1,10 @@
-<h1 align="center">Projeto de Reserva de Restaurantes (Site)</h1>
+<h1 align="center">NightCraft - Skyblock (Site)</h1>
 <p align="center">
 <img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge">
 </p>
 
 # Resumo do projeto
-Projeto em andamento, sendo realizado por alunos da Escola Técnica Estadual Maglhães Barata, visando desenvolver um site de reservas de um restaurante.
+Projeto em andamento, sendo realizado pela empresa NightCraft, visando mostrar as informações do seu servidor de Skyblock.
 
 # ✔️ Tecnologias utilizadas
 - ``HTML``
@@ -12,6 +12,6 @@ Projeto em andamento, sendo realizado por alunos da Escola Técnica Estadual Mag
 - ``Javascript``
 
 - # 📁 Acesso ao projeto
-Você pode <a href="https://github.com/Henrizn/Reserva-Restaurante-Site">acessar o código-fonte clicando aqui</a>
+Você pode <a href="">acessar o código-fonte clicando aqui</a>
 # 🛠️ Abrir e rodar o projeto
-Você pode abrir o <a href="https://henrizn.github.io/Reserva-Restaurante-Site/">site do projeto clicando aqui</a>
+Você pode abrir o <a href="">site do projeto clicando aqui</a>
